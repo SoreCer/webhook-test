@@ -23,7 +23,7 @@ restService.post('/quote', function(req, res) {
              var speech ="No hay amor imposible en esta vida, lo que sí existe son las personas que desisten justo antes de alcanzar el verdadero amor";
             break;
         case "amistad":
-            var speech ="Lo amigos son la familia que se escoge";
+            var speech ="Los amigos son la familia que se escoge";
             break;
         case "inspiracion":
             var speech ="Solo los que corren el riesgo de avanzar, pueden saber hasta dónde pueden llegar";

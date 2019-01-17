@@ -14,7 +14,7 @@ restService.use(bodyParser.json());
 restService.post('/quote', function(req, res) {
      //var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     //var speech = "Hola santi";
-    var type =req.body.result.parameters.TypeOfQuote.toLowerCase();
+    var type =req.body.queryResult.parameters.TypeOfQuote.toLowerCase();
     switch (type){
         case "felicidad":
              var speech ="Aquellos que quieren cantar siempre encuentran una canción";
@@ -32,8 +32,7 @@ restService.post('/quote', function(req, res) {
             var speech ="El destino mezcla las cartas, y nosotros las jugamos";
     }
     return res.json({
-        speech: speech,
-        displayText: speech,
+        fulfillmentText: speech,
         source: 'webhook-echo-sample'
     });
 });
